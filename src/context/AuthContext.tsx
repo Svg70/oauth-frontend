@@ -33,7 +33,7 @@ export const useAuth = () => useContext(AuthContext)
 
 // Google OAuth configuration
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "YOUR_GOOGLE_CLIENT_ID"
-const REDIRECT_URI = `${window.location.origin}/callback`
+const REDIRECT_URI = `https://wallet.aucburg.com/callback`
 const SCOPE = "email profile"
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
@@ -66,6 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
 
       // Fetch user info from Google
+      //here backend call?
       const response = await fetch("https://www.googleapis.com/oauth2/v2/userinfo", {
         headers: {
           Authorization: `Bearer ${accessToken}`,
