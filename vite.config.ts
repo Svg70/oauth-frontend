@@ -15,6 +15,6 @@ export default defineConfig({
         },
     },
     preview: {
-        'allowedHosts': ['walllet.aucburg.com']
+        'allowedHosts': ['wallet.aucburg.com']
     }
 })
